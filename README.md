@@ -2,6 +2,7 @@
 ## Features
  * Search Photo
  * Zoom Image
+ * Grid and List
 
 ## Dependecies
 * [Kingfisher](https://github.com/onevcat/Kingfisher)
