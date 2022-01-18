@@ -9,11 +9,16 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var segmentedControll: UISegmentedControl!
     @IBOutlet weak var collectionView: UICollectionView!
     weak var coordinator : AppCoordinator?
     var viewModel: MainViewModel?
     let searchController = UISearchController(searchResultsController: nil)
-    
+    //MARK: Custom layout for list and grid state
+    lazy var collectionViewFlowLayout : TokyoCollectionLayout = {
+        let layout = TokyoCollectionLayout(display: .grid)
+        return layout
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -24,6 +29,8 @@ class MainViewController: UIViewController {
         collectionView.registerCell(MainCollectionViewCell.self)
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.collectionViewLayout = collectionViewFlowLayout
+        collectionViewFlowLayout.display = .list
         searchController.delegate = self
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -42,6 +49,16 @@ class MainViewController: UIViewController {
             }
         }
         self.viewModel?.fetchPhoto()
+    }
+    
+    @IBAction func didTapSegmented(sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            collectionViewFlowLayout.display = .list
+            collectionViewFlowLayout.invalidateLayout()
+        } else {
+            collectionViewFlowLayout.display = .grid
+            collectionViewFlowLayout.invalidateLayout()
+        }
     }
 }
 
@@ -69,12 +86,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel?.processShowDetail(indexpath: indexPath)
-    }
-}
-
-extension MainViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 250)
     }
 }
 

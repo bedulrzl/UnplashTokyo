@@ -5,12 +5,14 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="UnsplashTokyo" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="bhe-bF-i7a" id="SXm-71-tDa"/>
+                <outlet property="segmentedControll" destination="ywd-Ch-aeH" id="c4g-ie-QZw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bhe-bF-i7a">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="103" width="414" height="793"/>
                     <color key="backgroundColor" red="0.96078431372549022" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Knq-wk-cwf">
                         <size key="itemSize" width="128" height="128"/>
@@ -29,16 +31,54 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAQ-zA-X1p">
+                    <rect key="frame" x="0.0" y="60" width="414" height="43"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ywd-Ch-aeH">
+                            <rect key="frame" x="8" y="0.0" width="398" height="36"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="zyy-xg-gWH"/>
+                            </constraints>
+                            <segments>
+                                <segment title="" image="icons8-rows-44"/>
+                                <segment title="" image="icons8-grid-44"/>
+                            </segments>
+                            <color key="tintColor" systemColor="systemTealColor"/>
+                            <color key="selectedSegmentTintColor" systemColor="systemTealColor"/>
+                            <connections>
+                                <action selector="didTapSegmentedWithSender:" destination="-1" eventType="valueChanged" id="6UL-ar-DZW"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <constraints>
+                        <constraint firstItem="ywd-Ch-aeH" firstAttribute="leading" secondItem="XAQ-zA-X1p" secondAttribute="leading" constant="8" id="9QV-jt-BNV"/>
+                        <constraint firstItem="ywd-Ch-aeH" firstAttribute="top" secondItem="XAQ-zA-X1p" secondAttribute="top" id="MXg-qE-bjo"/>
+                        <constraint firstAttribute="bottom" secondItem="ywd-Ch-aeH" secondAttribute="bottom" constant="8" id="gZS-2i-sHj"/>
+                        <constraint firstAttribute="trailing" secondItem="ywd-Ch-aeH" secondAttribute="trailing" constant="8" id="pik-Cy-1Ac"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.1173330918" green="0.76843100789999996" blue="0.85334551329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemTealColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bhe-bF-i7a" secondAttribute="bottom" id="7f3-FN-gWu"/>
-                <constraint firstItem="bhe-bF-i7a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9Zl-Hl-7lV"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bhe-bF-i7a" secondAttribute="trailing" id="XLL-Gn-Kqq"/>
-                <constraint firstItem="bhe-bF-i7a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tZo-j5-FDj"/>
+                <constraint firstItem="bhe-bF-i7a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7QH-Vh-UPB"/>
+                <constraint firstItem="XAQ-zA-X1p" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ic3-Gc-f1i"/>
+                <constraint firstAttribute="bottom" secondItem="bhe-bF-i7a" secondAttribute="bottom" id="KIQ-R9-kaR"/>
+                <constraint firstItem="bhe-bF-i7a" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ziw-DN-onF"/>
+                <constraint firstItem="XAQ-zA-X1p" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="bsd-4Y-ybl"/>
+                <constraint firstItem="XAQ-zA-X1p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rXK-pM-id5"/>
+                <constraint firstItem="bhe-bF-i7a" firstAttribute="top" secondItem="XAQ-zA-X1p" secondAttribute="bottom" id="xAC-OO-TMt"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="99"/>
+            <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
         </view>
     </objects>
+    <resources>
+        <image name="icons8-grid-44" width="22" height="22"/>
+        <image name="icons8-rows-44" width="22" height="22"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

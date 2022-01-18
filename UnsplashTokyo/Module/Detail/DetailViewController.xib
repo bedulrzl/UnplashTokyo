@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -18,14 +18,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="09G-cs-KSV">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HHa-YK-8WN">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                         </imageView>
                     </subviews>
                     <constraints>
@@ -33,7 +33,7 @@
                         <constraint firstItem="HHa-YK-8WN" firstAttribute="top" secondItem="09G-cs-KSV" secondAttribute="top" id="JDD-XH-bJC"/>
                         <constraint firstItem="HHa-YK-8WN" firstAttribute="leading" secondItem="09G-cs-KSV" secondAttribute="leading" id="JPh-MT-RhS"/>
                         <constraint firstItem="HHa-YK-8WN" firstAttribute="centerY" secondItem="09G-cs-KSV" secondAttribute="centerY" id="Tes-RP-9uO"/>
-                        <constraint firstItem="HHa-YK-8WN" firstAttribute="width" secondItem="09G-cs-KSV" secondAttribute="width" id="WTa-aD-DWD"/>
+                        <constraint firstItem="HHa-YK-8WN" firstAttribute="width" secondItem="09G-cs-KSV" secondAttribute="width" id="Trz-nH-HUN"/>
                         <constraint firstAttribute="trailing" secondItem="HHa-YK-8WN" secondAttribute="trailing" id="pXZ-Yb-zlt"/>
                     </constraints>
                 </scrollView>

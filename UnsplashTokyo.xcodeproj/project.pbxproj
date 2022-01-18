@@ -31,6 +31,7 @@
 		859D564B2793178F005E1848 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D564A2793178F005E1848 /* APIClient.swift */; };
 		859D564D27931B92005E1848 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D564C27931B92005E1848 /* MainViewModel.swift */; };
 		859D5664279328D5005E1848 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859D5663279328D5005E1848 /* Photo.swift */; };
+		85A63CA72796BD380098E193 /* GridCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A63CA62796BD380098E193 /* GridCollectionLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		859D564A2793178F005E1848 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		859D564C27931B92005E1848 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		859D5663279328D5005E1848 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		85A63CA62796BD380098E193 /* GridCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				857646AF2791C9AF00EAACCD /* MainViewController.swift */,
 				857646B02791C9AF00EAACCD /* MainViewController.xib */,
 				859D564C27931B92005E1848 /* MainViewModel.swift */,
+				85A63CA62796BD380098E193 /* GridCollectionLayout.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				8569E71127950879004A4E9B /* DetailCoordinator.swift in Sources */,
 				857646972791BFC400EAACCD /* SceneDelegate.swift in Sources */,
 				857646AA2791C69700EAACCD /* Coordinator.swift in Sources */,
+				85A63CA72796BD380098E193 /* GridCollectionLayout.swift in Sources */,
 				857646B12791C9AF00EAACCD /* MainViewController.swift in Sources */,
 				859D564D27931B92005E1848 /* MainViewModel.swift in Sources */,
 			);

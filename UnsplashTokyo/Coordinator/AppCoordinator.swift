@@ -20,6 +20,7 @@ class AppCoordinator: Coordinator {
         self.navigationController = UINavigationController(rootViewController: self.mainViewController)
         mainViewController.title = "Unsplashtokyo"
         mainViewController.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        mainViewController.navigationController?.navigationBar.barTintColor = .systemTeal
         mainViewController.viewModel?.didSelectPhoto = { photos in
             self.navigateToDetail(with: photos)
         }
